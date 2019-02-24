@@ -3,7 +3,7 @@ layout: post
 title:  "VQ vae loss terms"
 date:   2019-2-24
 categories: [tensorflow]
-mathjax: true
+use_math: true
 ---
 
 
