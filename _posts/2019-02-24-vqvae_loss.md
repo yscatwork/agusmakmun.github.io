@@ -9,18 +9,18 @@ mathjax: true
 VQ-VAE의 로스는 3개의 term으로 이루어져 있다.
 
 
-$$L = L_1 + L_2 + L_3$$
+$L = L_1 + L_2 + L_3$
 
 
 그리고 각각은 다음과 같이 정의된다.
 
-$$
+$
 \begin{align}
 L_1= \log{p(x | z_q(x))}\\
 L_2 = \lVert \mathrm{sg}[z_{e}(x)] - e \lVert_{2}^{2}\\
 L_3 = \beta \lVert z_{e}(x) - \mathrm{sg}[e] \lVert_{2}^{2}\\
 \end{align}
-$$
+$
 
 L1은 디코더 아웃풋과의 비교를 통한 reconsturction loss이다.
 
