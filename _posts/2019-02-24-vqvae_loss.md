@@ -23,8 +23,9 @@ L1은 디코더 아웃풋과의 비교를 통한 reconsturction loss이다.
 
 Sonnet 의 VectorQuantize 클래스에서 계산하는 로스는 $L_2 + L_3$ 에 해당한다.
 
-    vqloss = q_latent_loss + (self._commitment_cost * e_latent_loss) 
-
+```python
+vqloss = q_latent_loss + (self._commitment_cost * e_latent_loss) 
+```
 q_latent_loss = $L_2$  
 
 논문에서 vq-objective로 정의하는 본 loss term 은 quantized embedding vector (e)가 encoder output (vq input)  과 가까워 지도록 하기 위함이다.
