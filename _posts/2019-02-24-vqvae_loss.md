@@ -6,8 +6,6 @@ categories: [tensorflow]
 mathjax: true
 ---
 
-HIGHLIHGT
-
 VQ-VAE의 로스는 3개의 term으로 이루어져 있다.
 
 
@@ -31,8 +29,9 @@ q_latent_loss = $L_2$
 
 논문에서 vq-objective로 정의하는 본 loss term 은 quantized embedding vector (e)가 encoder output (vq input)  과 가까워 지도록 하기 위함이다.
 
-    q_latent_loss = tf.reduce_mean((quantized - tf.stop_gradient(inputs)) ** 2)
-
+```python
+q_latent_loss = tf.reduce_mean((quantized - tf.stop_gradient(inputs)) ** 2)
+```
 e_latent_loss  = $L_3$ (아직 commitment cost 상수는 안 곱한 것)
 
 논문에서 commitment loss로 정의하는 본 loss term 은 embedding의 스케일을 regularize 하는 격이다 (뇌 해석). embedding을 배우는 것에 commit 하도록 한다. $L_3$ 는 commitment cost $\beta$ 와 e_latent_loss의 곱이다.
@@ -40,7 +39,7 @@ e_latent_loss  = $L_3$ (아직 commitment cost 상수는 안 곱한 것)
 loss는 commitment cost 0.25 정도에서 robust (안정적이라는듯) 했음. 그러나 이는 $L_1$ 즉 reconstruction loss의 스케일에 따라 달라질 것이라고 함.
 
 
-
+```python
     e_latent_loss = tf.reduce_mean((tf.stop_gradient(quantized) - inputs) ** 2)
-
+```
 
