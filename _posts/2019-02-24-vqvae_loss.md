@@ -6,6 +6,7 @@ categories: [tensorflow]
 mathjax: true
 ---
 
+HIGHLIHGT
 
 VQ-VAE의 로스는 3개의 term으로 이루어져 있다.
 
