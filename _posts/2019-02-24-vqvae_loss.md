@@ -3,12 +3,14 @@ layout: post
 title:  "VQ vae loss terms"
 date:   2019-2-24
 categories: [tensorflow]
-use_math: true
+mathjax: true
 ---
 
 
 VQ-VAE의 로스는 3개의 term으로 이루어져 있다.
 
+
+ddfefdfdf
 
 $$L = L_1 + L_2 + L_3\\$$
 
