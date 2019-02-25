@@ -9,7 +9,6 @@ mathjax: true
 
 VQ-VAE의 로스는 3개의 term으로 이루어져 있다.
 
-hoho
 
 $$L = L_1 + L_2 + L_3$$
 
