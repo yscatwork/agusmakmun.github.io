@@ -59,7 +59,7 @@ a:hover {
 div.content pre {
   background: #f2edd2;
   padding: 10px;
-  color: #FFF;
+  color: #000000;
   overflow-x: auto;
   font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
   font-size: 12px;
